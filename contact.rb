@@ -12,10 +12,11 @@ field :last_name,  as: :string
 field :email,      as: :string
 field :note,       as: :text
 
-def full_name
-  "#{first_name} #{last_name}"
-end
+  def full_name
+    "#{first_name} #{last_name}"
+  end
 
+end
 
 Contact.auto_upgrade!
 
