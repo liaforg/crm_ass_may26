@@ -106,6 +106,12 @@ class CRM
 
 end
 
+contact = Contact.create(
+  first_name: "Lia",
+  last_name:  "Forg",
+  email:      "abc@abc.com",
+  note:       "abc"
+)
 
 # Contact.create("Lia", "Forg", "abc", "def")
 # Contact.create("Dan", "Man", "abc", "def")
