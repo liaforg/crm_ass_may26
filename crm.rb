@@ -107,9 +107,13 @@ class CRM
 end
 
 
-Contact.create("Lia", "Forg", "abc", "def")
-Contact.create("Dan", "Man", "abc", "def")
-Contact.create("Laur", "Mac", "abc", "def")
+# Contact.create("Lia", "Forg", "abc", "def")
+# Contact.create("Dan", "Man", "abc", "def")
+# Contact.create("Laur", "Mac", "abc", "def")
 
 a_crm_app = CRM.new("New CRM")
 a_crm_app.main_menu
+
+at_exit do
+  ActiveRecord::Base.connection.close
+end
